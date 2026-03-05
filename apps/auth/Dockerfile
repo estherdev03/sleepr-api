@@ -7,7 +7,7 @@ COPY pnpm-lock.yaml ./
 
 RUN npm install -g pnpm
 
-RUN pnpm install
+RUN pnpm install 
 
 COPY . .
 
@@ -29,4 +29,10 @@ RUN pnpm install --prod
 
 COPY --from=development /usr/src/app/dist ./dist
 
-CMD ["node", "dist/app/reservations/main"]
+CMD ["node", "dist/apps/auth/main"]
+
+
+
+
+
+
